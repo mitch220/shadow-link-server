@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Shadow Link Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
 <div class="app">
 
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <div class="sidebar">
+
         <h2>Shadow Link</h2>
 
         <button onclick="switchChannel('general')"># general</button>
@@ -26,23 +29,33 @@
         <hr>
 
         <div id="status">🔴 Disconnected</div>
+
     </div>
 
-    <!-- CHAT AREA -->
+    <!-- Chat -->
     <div class="chat">
 
         <div id="messages"></div>
 
         <div class="input">
-            <input id="msgInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()">
-            <button onclick="sendMessage()">Send</button>
+
+            <input
+                id="msgInput"
+                type="text"
+                placeholder="Type a message..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
         </div>
 
     </div>
 
 </div>
 
-<script src="script.js"></script>
+<script src="/static/app.js"></script>
 
 </body>
 </html>
