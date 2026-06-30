@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow Link Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Shadow Link</h2>
+
+        <button onclick="switchChannel('general')"># general</button>
+        <button onclick="switchChannel('announcements')"># announcements</button>
+        <button onclick="switchChannel('memes')"># memes</button>
+
+        <hr>
+
+        <button onclick="switchChannel('fortnite')"># fortnite</button>
+        <button onclick="switchChannel('minecraft')"># minecraft</button>
+        <button onclick="switchChannel('roblox')"># roblox</button>
+
+        <hr>
+
+        <div id="status">🔴 Disconnected</div>
+    </div>
+
+    <!-- CHAT AREA -->
+    <div class="chat">
+
+        <div id="messages"></div>
+
+        <div class="input">
+            <input id="msgInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
